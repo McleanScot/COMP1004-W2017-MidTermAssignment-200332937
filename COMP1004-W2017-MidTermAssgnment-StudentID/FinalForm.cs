@@ -20,7 +20,12 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void FinalForm_Load(object sender, EventArgs e)
         {
-            
+            StrengthTextBox.Text = Program.Abilities.Strength;
+            DexterityTextBox.Text = Program.Abilities.Dexterity;
+            EnduranceTextBox.Text = Program.Abilities.Endurance;
+            IntelligenceTextBox.Text = Program.Abilities.Intelligence;
+            PerceptionTextBox.Text = Program.Abilities.Perception;
+            CharismaTextBox.Text = Program.Abilities.Charisma;
         }
     }
 }
