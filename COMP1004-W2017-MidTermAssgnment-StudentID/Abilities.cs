@@ -19,5 +19,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         public string Perception { get; set; }
 
         public string Charisma { get; set; }
+        public string Race { get; set; }
+        public string Job { get; set; }
+        public string HealthPoints { get; set; }
     }
+
 }

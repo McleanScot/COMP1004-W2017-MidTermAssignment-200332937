@@ -26,6 +26,33 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             IntelligenceTextBox.Text = Program.Abilities.Intelligence;
             PerceptionTextBox.Text = Program.Abilities.Perception;
             CharismaTextBox.Text = Program.Abilities.Charisma;
+            HealthPointsTextBox.Text = Program.Abilities.HealthPoints;
+            JobTextBox.Text = Program.Abilities.Job;
+            RaceTextBox.Text = Program.Abilities.Race;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+
+            fontDialog.ShowDialog();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Preparing to Print, please wait...");
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+
+            aboutBox.ShowDialog();
         }
     }
 }
