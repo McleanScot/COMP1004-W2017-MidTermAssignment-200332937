@@ -25,10 +25,13 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         public JobForm()
         {
             InitializeComponent();
+            NextButton.Enabled = false;
         }
 
         private void SoldierRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+
+            NextButton.Enabled = true;
             _healthPoints = (_enduranceHealthChange).ToString();
 
             HealthPointsTextBox.Text = _healthPoints;
@@ -38,6 +41,8 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void RogueRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
+
             _healthPoints = (_dexterityHealthChange + 28).ToString();
 
             HealthPointsTextBox.Text = _healthPoints;
@@ -47,6 +52,8 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void MagickerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
+
             _healthPoints = (_intelligenceHealthChange + 15).ToString();
 
             HealthPointsTextBox.Text = _healthPoints;
@@ -56,6 +63,8 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void CultistRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
+
             _healthPoints = (_charismaHealthChange + 24).ToString();
 
             HealthPointsTextBox.Text = _healthPoints;
@@ -79,5 +88,7 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
             finalForm.Show();
         }
+
+        
     }
 }

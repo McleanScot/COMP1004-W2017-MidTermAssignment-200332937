@@ -65,6 +65,7 @@
             this.EnduranceLabel = new System.Windows.Forms.Label();
             this.DexterityLabel = new System.Windows.Forms.Label();
             this.StrengthLabel = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.CaracterPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.CharacterInformationGroupBox.SuspendLayout();
@@ -97,14 +98,14 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -119,7 +120,7 @@
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.fontToolStripMenuItem.Text = "&Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -134,7 +135,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -237,6 +238,7 @@
             // 
             this.HealthPointsTextBox.Location = new System.Drawing.Point(95, 84);
             this.HealthPointsTextBox.Name = "HealthPointsTextBox";
+            this.HealthPointsTextBox.ReadOnly = true;
             this.HealthPointsTextBox.Size = new System.Drawing.Size(121, 20);
             this.HealthPointsTextBox.TabIndex = 10;
             // 
@@ -253,6 +255,7 @@
             // 
             this.RaceTextBox.Location = new System.Drawing.Point(95, 57);
             this.RaceTextBox.Name = "RaceTextBox";
+            this.RaceTextBox.ReadOnly = true;
             this.RaceTextBox.Size = new System.Drawing.Size(121, 20);
             this.RaceTextBox.TabIndex = 9;
             // 
@@ -269,6 +272,7 @@
             // 
             this.JobTextBox.Location = new System.Drawing.Point(95, 29);
             this.JobTextBox.Name = "JobTextBox";
+            this.JobTextBox.ReadOnly = true;
             this.JobTextBox.Size = new System.Drawing.Size(121, 20);
             this.JobTextBox.TabIndex = 8;
             // 
@@ -306,6 +310,7 @@
             // 
             this.CharismaTextBox.Location = new System.Drawing.Point(42, 202);
             this.CharismaTextBox.Name = "CharismaTextBox";
+            this.CharismaTextBox.ReadOnly = true;
             this.CharismaTextBox.Size = new System.Drawing.Size(100, 20);
             this.CharismaTextBox.TabIndex = 11;
             // 
@@ -313,6 +318,7 @@
             // 
             this.PerceptionTextBox.Location = new System.Drawing.Point(42, 165);
             this.PerceptionTextBox.Name = "PerceptionTextBox";
+            this.PerceptionTextBox.ReadOnly = true;
             this.PerceptionTextBox.Size = new System.Drawing.Size(100, 20);
             this.PerceptionTextBox.TabIndex = 10;
             // 
@@ -320,6 +326,7 @@
             // 
             this.IntelligenceTextBox.Location = new System.Drawing.Point(41, 127);
             this.IntelligenceTextBox.Name = "IntelligenceTextBox";
+            this.IntelligenceTextBox.ReadOnly = true;
             this.IntelligenceTextBox.Size = new System.Drawing.Size(100, 20);
             this.IntelligenceTextBox.TabIndex = 9;
             // 
@@ -327,6 +334,7 @@
             // 
             this.EnduranceTextBox.Location = new System.Drawing.Point(41, 89);
             this.EnduranceTextBox.Name = "EnduranceTextBox";
+            this.EnduranceTextBox.ReadOnly = true;
             this.EnduranceTextBox.Size = new System.Drawing.Size(100, 20);
             this.EnduranceTextBox.TabIndex = 8;
             // 
@@ -334,6 +342,7 @@
             // 
             this.DexterityTextBox.Location = new System.Drawing.Point(41, 52);
             this.DexterityTextBox.Name = "DexterityTextBox";
+            this.DexterityTextBox.ReadOnly = true;
             this.DexterityTextBox.Size = new System.Drawing.Size(100, 20);
             this.DexterityTextBox.TabIndex = 7;
             // 
@@ -341,6 +350,7 @@
             // 
             this.StrengthTextBox.Location = new System.Drawing.Point(42, 17);
             this.StrengthTextBox.Name = "StrengthTextBox";
+            this.StrengthTextBox.ReadOnly = true;
             this.StrengthTextBox.Size = new System.Drawing.Size(100, 20);
             this.StrengthTextBox.TabIndex = 6;
             // 
@@ -398,6 +408,16 @@
             this.StrengthLabel.TabIndex = 0;
             this.StrengthLabel.Text = "STR";
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(553, 461);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 5;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // CaracterPictureBox
             // 
             this.CaracterPictureBox.Location = new System.Drawing.Point(334, 177);
@@ -410,6 +430,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(641, 508);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.CaracterPictureBox);
             this.Controls.Add(this.AbilitiesGroupBox);
             this.Controls.Add(this.FeaturesGroupBox);
@@ -475,5 +496,6 @@
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.PictureBox CaracterPictureBox;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

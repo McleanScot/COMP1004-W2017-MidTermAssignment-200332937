@@ -19,6 +19,7 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         public AbilityForm()
         {
             InitializeComponent();
+            NextButton.Enabled = false;
         }
 
         /// <summary>
@@ -46,6 +47,7 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             INTTextBox.Text = Roll3D10().ToString();
             PERTextBox.Text = Roll3D10().ToString();
             CHATextBox.Text = Roll3D10().ToString();
+            NextButton.Enabled = true;
         }
 
         private void NextButton_Click(object sender, EventArgs e)

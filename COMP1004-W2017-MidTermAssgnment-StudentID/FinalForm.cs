@@ -33,7 +33,7 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            exitForm();
         }
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,6 +53,16 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             AboutBox aboutBox = new AboutBox();
 
             aboutBox.ShowDialog();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            exitForm();
+        }
+
+        private void exitForm()
+        {
+            Application.Exit();
         }
     }
 }

@@ -14,12 +14,20 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
     {
         public AbilityForm previousForm;
 
-        private int _strenghtChange = Convert.ToInt32(Program.Abilities.Strength);
-        private int _DexterityChange = Convert.ToInt32(Program.Abilities.Dexterity);
-        private int _EnduranceChange = Convert.ToInt32(Program.Abilities.Endurance);
-        private int _intelligenceChange = Convert.ToInt32(Program.Abilities.Intelligence);
-        private int _charismaChange = Convert.ToInt32(Program.Abilities.Charisma);
-        private int _PerceptionChange = Convert.ToInt32(Program.Abilities.Perception);
+        private int _strenghtOriginal = Convert.ToInt32(Program.Abilities.Strength);
+        private int _dexterityOriginal = Convert.ToInt32(Program.Abilities.Dexterity);
+        private int _enduranceOriginal = Convert.ToInt32(Program.Abilities.Endurance);
+        private int _intelligenceOriginal = Convert.ToInt32(Program.Abilities.Intelligence);
+        private int _charismaOriginal = Convert.ToInt32(Program.Abilities.Charisma);
+        private int _perceptionOriginal = Convert.ToInt32(Program.Abilities.Perception);
+
+        private int _strenght = 0;
+        private int _dexterity = 0;
+        private int _endurance = 0;
+        private int _intelligence = 0;
+        private int _charisma = 0;
+        private int _perception = 0;
+
 
         private string _racePicked;
 
@@ -27,18 +35,19 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         public RaceForm()
         {
             InitializeComponent();
+            NextButton.Enabled = false;
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
             Abilities abilities = Program.Abilities;
 
-            abilities.Strength = _strenghtChange.ToString();
-            abilities.Dexterity = _DexterityChange.ToString();
-            abilities.Endurance = _EnduranceChange.ToString();
-            abilities.Intelligence = _intelligenceChange.ToString();
-            abilities.Charisma = _charismaChange.ToString();
-            abilities.Perception = _PerceptionChange.ToString();
+            abilities.Strength = _strenght.ToString();
+            abilities.Dexterity = _dexterity.ToString();
+            abilities.Endurance = _endurance.ToString();
+            abilities.Intelligence = _intelligence.ToString();
+            abilities.Charisma = _charisma.ToString();
+            abilities.Perception = _perception.ToString();
             abilities.Race = _racePicked;
 
             JobForm jobForm = new JobForm();
@@ -52,16 +61,17 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void HumanRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
             CharacterPictureBox.Image = Properties.Resources.M_Human1;
 
             RacialBonusTextBox.Text = "All abilities +5";
 
-            _strenghtChange = _strenghtChange + 5;
-            _DexterityChange = _DexterityChange + 5;
-            _EnduranceChange = _EnduranceChange + 5;
-            _intelligenceChange = _intelligenceChange + 5;
-            _charismaChange = _charismaChange + 5;
-            _PerceptionChange = _PerceptionChange + 5;
+            _strenght = _strenghtOriginal + 5;
+            _dexterity = _dexterityOriginal + 5;
+            _endurance = _enduranceOriginal + 5;
+            _intelligence = _intelligenceOriginal + 5;
+            _charisma = _charismaOriginal + 5;
+            _perception = _perceptionOriginal + 5;
 
             _racePicked = HumanRadioButton.Text;
 
@@ -71,13 +81,14 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void DwarfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
             CharacterPictureBox.Image = Properties.Resources.M_Dwarf1;
 
             RacialBonusTextBox.Text = "Strength and Perception +20, Charisma -10";
 
-            _strenghtChange = _strenghtChange + 20;
-            _PerceptionChange = _PerceptionChange + 20;
-            _charismaChange = _charismaChange - 10;
+            _strenght = _strenghtOriginal + 20;
+            _perception = _perceptionOriginal + 20;
+            _charisma = _charismaOriginal - 10;
 
             _racePicked = DwarfRadioButton.Text;
 
@@ -85,25 +96,27 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void ElfRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
             CharacterPictureBox.Image = Properties.Resources.M_Elf1;
 
             RacialBonusTextBox.Text = "Dexterity and Charisma +15";
 
-            _DexterityChange = _DexterityChange + 15;
-            _charismaChange = _charismaChange + 15;
+            _dexterity = _dexterityOriginal + 15;
+            _charisma = _charismaOriginal + 15;
 
             _racePicked = ElfRadioButton.Text;
         }
 
         private void HaflingRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            NextButton.Enabled = true;
             CharacterPictureBox.Image = Properties.Resources.M_Halfling2;
 
             RacialBonusTextBox.Text = "Dexterity and Intelligence +20, Strength -10";
 
-            _DexterityChange = _DexterityChange + 20;
-            _intelligenceChange = _intelligenceChange + 20;
-            _strenghtChange = _strenghtChange - 10;
+            _dexterity = _dexterityOriginal + 20;
+            _intelligence = _intelligenceOriginal + 20;
+            _strenght = _strenghtOriginal - 10;
 
             _racePicked = HaflingRadioButton.Text;
         }

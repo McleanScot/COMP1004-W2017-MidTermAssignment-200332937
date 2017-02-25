@@ -33,10 +33,10 @@
             this.RacialBonusLabel = new System.Windows.Forms.Label();
             this.RacialBonusTextBox = new System.Windows.Forms.TextBox();
             this.RaceGroupBox = new System.Windows.Forms.GroupBox();
-            this.HumanRadioButton = new System.Windows.Forms.RadioButton();
-            this.DwarfRadioButton = new System.Windows.Forms.RadioButton();
-            this.HaflingRadioButton = new System.Windows.Forms.RadioButton();
             this.ElfRadioButton = new System.Windows.Forms.RadioButton();
+            this.HaflingRadioButton = new System.Windows.Forms.RadioButton();
+            this.DwarfRadioButton = new System.Windows.Forms.RadioButton();
+            this.HumanRadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).BeginInit();
             this.RaceGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -77,8 +77,9 @@
             this.RacialBonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RacialBonusTextBox.Location = new System.Drawing.Point(242, 400);
             this.RacialBonusTextBox.Name = "RacialBonusTextBox";
+            this.RacialBonusTextBox.ReadOnly = true;
             this.RacialBonusTextBox.Size = new System.Drawing.Size(287, 29);
-            this.RacialBonusTextBox.TabIndex = 7;
+            this.RacialBonusTextBox.TabIndex = 0;
             // 
             // RaceGroupBox
             // 
@@ -93,29 +94,17 @@
             this.RaceGroupBox.TabStop = false;
             this.RaceGroupBox.Text = "Select Race";
             // 
-            // HumanRadioButton
+            // ElfRadioButton
             // 
-            this.HumanRadioButton.AutoSize = true;
-            this.HumanRadioButton.Location = new System.Drawing.Point(7, 20);
-            this.HumanRadioButton.Name = "HumanRadioButton";
-            this.HumanRadioButton.Size = new System.Drawing.Size(59, 17);
-            this.HumanRadioButton.TabIndex = 0;
-            this.HumanRadioButton.TabStop = true;
-            this.HumanRadioButton.Text = "Human";
-            this.HumanRadioButton.UseVisualStyleBackColor = true;
-            this.HumanRadioButton.CheckedChanged += new System.EventHandler(this.HumanRadioButton_CheckedChanged);
-            // 
-            // DwarfRadioButton
-            // 
-            this.DwarfRadioButton.AutoSize = true;
-            this.DwarfRadioButton.Location = new System.Drawing.Point(7, 43);
-            this.DwarfRadioButton.Name = "DwarfRadioButton";
-            this.DwarfRadioButton.Size = new System.Drawing.Size(53, 17);
-            this.DwarfRadioButton.TabIndex = 1;
-            this.DwarfRadioButton.TabStop = true;
-            this.DwarfRadioButton.Text = "Dwarf";
-            this.DwarfRadioButton.UseVisualStyleBackColor = true;
-            this.DwarfRadioButton.CheckedChanged += new System.EventHandler(this.DwarfRadioButton_CheckedChanged);
+            this.ElfRadioButton.AutoSize = true;
+            this.ElfRadioButton.Location = new System.Drawing.Point(7, 66);
+            this.ElfRadioButton.Name = "ElfRadioButton";
+            this.ElfRadioButton.Size = new System.Drawing.Size(37, 17);
+            this.ElfRadioButton.TabIndex = 3;
+            this.ElfRadioButton.TabStop = true;
+            this.ElfRadioButton.Text = "Elf";
+            this.ElfRadioButton.UseVisualStyleBackColor = true;
+            this.ElfRadioButton.CheckedChanged += new System.EventHandler(this.ElfRadioButton_CheckedChanged);
             // 
             // HaflingRadioButton
             // 
@@ -129,17 +118,29 @@
             this.HaflingRadioButton.UseVisualStyleBackColor = true;
             this.HaflingRadioButton.CheckedChanged += new System.EventHandler(this.HaflingRadioButton_CheckedChanged);
             // 
-            // ElfRadioButton
+            // DwarfRadioButton
             // 
-            this.ElfRadioButton.AutoSize = true;
-            this.ElfRadioButton.Location = new System.Drawing.Point(7, 66);
-            this.ElfRadioButton.Name = "ElfRadioButton";
-            this.ElfRadioButton.Size = new System.Drawing.Size(37, 17);
-            this.ElfRadioButton.TabIndex = 3;
-            this.ElfRadioButton.TabStop = true;
-            this.ElfRadioButton.Text = "Elf";
-            this.ElfRadioButton.UseVisualStyleBackColor = true;
-            this.ElfRadioButton.CheckedChanged += new System.EventHandler(this.ElfRadioButton_CheckedChanged);
+            this.DwarfRadioButton.AutoSize = true;
+            this.DwarfRadioButton.Location = new System.Drawing.Point(7, 43);
+            this.DwarfRadioButton.Name = "DwarfRadioButton";
+            this.DwarfRadioButton.Size = new System.Drawing.Size(53, 17);
+            this.DwarfRadioButton.TabIndex = 1;
+            this.DwarfRadioButton.TabStop = true;
+            this.DwarfRadioButton.Text = "Dwarf";
+            this.DwarfRadioButton.UseVisualStyleBackColor = true;
+            this.DwarfRadioButton.CheckedChanged += new System.EventHandler(this.DwarfRadioButton_CheckedChanged);
+            // 
+            // HumanRadioButton
+            // 
+            this.HumanRadioButton.AutoSize = true;
+            this.HumanRadioButton.Location = new System.Drawing.Point(7, 20);
+            this.HumanRadioButton.Name = "HumanRadioButton";
+            this.HumanRadioButton.Size = new System.Drawing.Size(59, 17);
+            this.HumanRadioButton.TabIndex = 0;
+            this.HumanRadioButton.TabStop = true;
+            this.HumanRadioButton.Text = "Human";
+            this.HumanRadioButton.UseVisualStyleBackColor = true;
+            this.HumanRadioButton.CheckedChanged += new System.EventHandler(this.HumanRadioButton_CheckedChanged);
             // 
             // RaceForm
             // 
