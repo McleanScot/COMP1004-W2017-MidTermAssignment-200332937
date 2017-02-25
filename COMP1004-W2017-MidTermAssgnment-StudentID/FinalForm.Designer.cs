@@ -66,12 +66,12 @@
             this.DexterityLabel = new System.Windows.Forms.Label();
             this.StrengthLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.CaracterPictureBox = new System.Windows.Forms.PictureBox();
+            this.CharacterPictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.CharacterInformationGroupBox.SuspendLayout();
             this.FeaturesGroupBox.SuspendLayout();
             this.AbilitiesGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CaracterPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -418,20 +418,20 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // CaracterPictureBox
+            // CharacterPictureBox
             // 
-            this.CaracterPictureBox.Location = new System.Drawing.Point(334, 177);
-            this.CaracterPictureBox.Name = "CaracterPictureBox";
-            this.CaracterPictureBox.Size = new System.Drawing.Size(295, 237);
-            this.CaracterPictureBox.TabIndex = 4;
-            this.CaracterPictureBox.TabStop = false;
+            this.CharacterPictureBox.Location = new System.Drawing.Point(334, 177);
+            this.CharacterPictureBox.Name = "CharacterPictureBox";
+            this.CharacterPictureBox.Size = new System.Drawing.Size(295, 237);
+            this.CharacterPictureBox.TabIndex = 4;
+            this.CharacterPictureBox.TabStop = false;
             // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(641, 508);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.CaracterPictureBox);
+            this.Controls.Add(this.CharacterPictureBox);
             this.Controls.Add(this.AbilitiesGroupBox);
             this.Controls.Add(this.FeaturesGroupBox);
             this.Controls.Add(this.CharacterInformationGroupBox);
@@ -450,7 +450,7 @@
             this.FeaturesGroupBox.PerformLayout();
             this.AbilitiesGroupBox.ResumeLayout(false);
             this.AbilitiesGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CaracterPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,7 +495,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.PictureBox CaracterPictureBox;
+        private System.Windows.Forms.PictureBox CharacterPictureBox;
         private System.Windows.Forms.Button ExitButton;
     }
 }

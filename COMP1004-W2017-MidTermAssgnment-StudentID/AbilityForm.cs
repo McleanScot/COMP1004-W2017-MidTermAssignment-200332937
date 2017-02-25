@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * scot mclean
+ * 200332937
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +41,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             }
             return result;
         }
-
+        /*
+         * setting the abilities with the roll3d10 method
+         */
         private void RollButton_Click(object sender, EventArgs e)
         {
             Debug.WriteLine(Roll3D10().ToString());
@@ -49,7 +55,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             CHATextBox.Text = Roll3D10().ToString();
             NextButton.Enabled = true;
         }
-
+        /*
+         * next button handler setting the textbox texts to their related ability values
+         */
         private void NextButton_Click(object sender, EventArgs e)
         {
             
@@ -61,7 +69,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             abilities.Charisma = CHATextBox.Text;
             abilities.Perception = PERTextBox.Text;
             abilities.Intelligence = INTTextBox.Text;
-
+         /*
+         * hiding this form and sending us to the raceform
+         */
             this.Hide();
 
             RaceForm raceForm = new RaceForm();

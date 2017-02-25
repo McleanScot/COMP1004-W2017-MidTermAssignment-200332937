@@ -13,7 +13,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
     public partial class JobForm : Form
     {
         public RaceForm previousForm;
-
+        /*
+        *instance variables
+        */
         private int _enduranceHealthChange = Convert.ToInt32(Program.Abilities.Endurance);
         private int _dexterityHealthChange = Convert.ToInt32(Program.Abilities.Dexterity);
         private int _intelligenceHealthChange = Convert.ToInt32(Program.Abilities.Intelligence);
@@ -30,7 +32,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void SoldierRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            /*
+           *setting the health points and changing them to strings, also setting the job
+           */
             NextButton.Enabled = true;
             _healthPoints = (_enduranceHealthChange).ToString();
 
@@ -41,6 +45,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void RogueRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            /*
+           *setting the health points and changing them to strings, also setting the job
+           */
             NextButton.Enabled = true;
 
             _healthPoints = (_dexterityHealthChange + 28).ToString();
@@ -52,6 +59,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void MagickerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            /*
+           *setting the health points and changing them to strings, also setting the job
+           */
             NextButton.Enabled = true;
 
             _healthPoints = (_intelligenceHealthChange + 15).ToString();
@@ -63,6 +73,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void CultistRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            /*
+           *setting the health points and changing them to strings, also setting the job
+           */
             NextButton.Enabled = true;
 
             _healthPoints = (_charismaHealthChange + 24).ToString();
@@ -74,6 +87,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            /*
+           *setting the health and job and then hiding the form and going to the next one
+           */
             Abilities abilities = Program.Abilities;
 
             abilities.HealthPoints = _healthPoints;
