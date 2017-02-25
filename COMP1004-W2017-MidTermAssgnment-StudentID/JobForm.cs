@@ -18,6 +18,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         private int _dexterityHealthChange = Convert.ToInt32(Program.Abilities.Dexterity);
         private int _intelligenceHealthChange = Convert.ToInt32(Program.Abilities.Intelligence);
         private int _charismaHealthChange = Convert.ToInt32(Program.Abilities.Charisma);
+        private string _jobPicked;
+        private string _healthPoints;
+        
 
         public JobForm()
         {
@@ -26,27 +29,47 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
         private void SoldierRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            HealthPointsTextBox.Text = (_enduranceHealthChange).ToString();
+            _healthPoints = (_enduranceHealthChange).ToString();
+
+            HealthPointsTextBox.Text = _healthPoints;
+
+            _jobPicked = SoldierRadioButton.Text;
         }
 
         private void RogueRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            HealthPointsTextBox.Text = (_dexterityHealthChange + 28).ToString();
+            _healthPoints = (_dexterityHealthChange + 28).ToString();
+
+            HealthPointsTextBox.Text = _healthPoints;
+
+            _jobPicked = RogueRadioButton.Text;
         }
 
         private void MagickerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            HealthPointsTextBox.Text = (_intelligenceHealthChange + 15).ToString();
+            _healthPoints = (_intelligenceHealthChange + 15).ToString();
+
+            HealthPointsTextBox.Text = _healthPoints;
+
+            _jobPicked = MagickerRadioButton.Text;
         }
 
         private void CultistRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            HealthPointsTextBox.Text = (_charismaHealthChange + 24).ToString();
+            _healthPoints = (_charismaHealthChange + 24).ToString();
+
+            HealthPointsTextBox.Text = _healthPoints;
+
+            _jobPicked = CultistRadioButton.Text;
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
             Abilities abilities = Program.Abilities;
+
+            abilities.HealthPoints = _healthPoints;
+
+            abilities.Job = _jobPicked;
 
             this.Hide();
 

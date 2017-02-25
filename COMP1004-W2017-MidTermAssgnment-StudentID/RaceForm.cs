@@ -21,6 +21,8 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         private int _charismaChange = Convert.ToInt32(Program.Abilities.Charisma);
         private int _PerceptionChange = Convert.ToInt32(Program.Abilities.Perception);
 
+        private string _racePicked;
+
 
         public RaceForm()
         {
@@ -31,11 +33,21 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
         {
             Abilities abilities = Program.Abilities;
 
+            abilities.Strength = _strenghtChange.ToString();
+            abilities.Dexterity = _DexterityChange.ToString();
+            abilities.Endurance = _EnduranceChange.ToString();
+            abilities.Intelligence = _intelligenceChange.ToString();
+            abilities.Charisma = _charismaChange.ToString();
+            abilities.Perception = _PerceptionChange.ToString();
+            abilities.Race = _racePicked;
+
             JobForm jobForm = new JobForm();
             jobForm.previousForm = this;
 
             jobForm.Show();
             this.Hide();
+
+            
         }
 
         private void HumanRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -51,7 +63,10 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             _charismaChange = _charismaChange + 5;
             _PerceptionChange = _PerceptionChange + 5;
 
-            
+            _racePicked = HumanRadioButton.Text;
+
+
+
         }
 
         private void DwarfRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -62,7 +77,9 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
             _strenghtChange = _strenghtChange + 20;
             _PerceptionChange = _PerceptionChange + 20;
-            _charismaChange = _charismaChange + 10;
+            _charismaChange = _charismaChange - 10;
+
+            _racePicked = DwarfRadioButton.Text;
 
         }
 
@@ -74,6 +91,8 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
 
             _DexterityChange = _DexterityChange + 15;
             _charismaChange = _charismaChange + 15;
+
+            _racePicked = ElfRadioButton.Text;
         }
 
         private void HaflingRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -85,6 +104,8 @@ namespace COMP1004_W2017_MidTermAssgnment_StudentID
             _DexterityChange = _DexterityChange + 20;
             _intelligenceChange = _intelligenceChange + 20;
             _strenghtChange = _strenghtChange - 10;
+
+            _racePicked = HaflingRadioButton.Text;
         }
     }
 }
